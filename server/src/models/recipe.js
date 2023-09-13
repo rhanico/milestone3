@@ -1,12 +1,12 @@
 const mongoose = require( "mongoose" )
 
-const recipe = mongoose.Schema(
+const recipeSchema = mongoose.Schema(
 
     {
-        tile: {
+        title: {
             type: String,
             required: [ 
-                ture, "Please provide name for the recipe"],
+                true, "Please provide name for the recipe"],
             trim: true,
         },
         description: {
@@ -38,11 +38,14 @@ const recipe = mongoose.Schema(
             type: String,
             required: true,
         },
-        timeStamp: true,
+        createdOn: {
+            type: Date,
+            default: Date.now,
+        },
 
     },
 );
 
 const Recipe = mongoose.model("Recipe",recipeSchema);
 
-module.export = Recipe;
+module.exports = Recipe;
