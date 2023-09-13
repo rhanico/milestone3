@@ -16,7 +16,7 @@ app.listen( 3000, () => {
                                     // MONGODB( DATABASE ) CONNECTIVITY
 mongoose.set("strictQuery",false)
 mongoose.connect(
-    "mongodb+srv://rhanico:zT49hzdzgSS1XqDI@cluster1.bfsurib.mongodb.net/thekitchen?retryWrites=true&w=majority")
+    "mongodb+srv://rhanico:zT49hzdzgSS1XqDI@cluster1.bfsurib.mongodb.net/?retryWrites=true&w=majority")
     .then(() => {
         console.log('CONNECTED TO KITCHEN DATABASE')
     }).catch( (error) => {
