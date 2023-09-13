@@ -5,7 +5,7 @@ function App() {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        fetch("/recipe/recipes") // Adjust the route to match your backend route
+        fetch("/recipe/recipes") 
             .then((response) => response.json())
             .then((data) => {
                 setRecipes(data);

@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const recipeRoutes = require("./routes/recipe");
-const Recipe = require("./models/recipe");  // to recipe.js ( Schema Model )
+const Recipe = require("./models/recipe");  // PATH recipe.js ( Schema Model )
 
 
 dotenv.config();                            // Load environment variables from .env file
@@ -19,7 +19,7 @@ mongoose.set("strictQuery", false);
 
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,               // Corrected typo here
+    useUnifiedTopology: true,               
   })
   .then(() => {
       console.log('CONNECTED TO KITCHEN DATABASE');
