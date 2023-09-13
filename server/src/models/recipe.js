@@ -38,12 +38,9 @@ const recipe = mongoose.Schema(
             type: String,
             required: true,
         },
-        postedDate: {
-            type: Date,
-            default: Date, now,
-        },
+        timeStamp: true,
 
-    }
+    },
 );
 
 const Recipe = mongoose.model("Recipe",recipeSchema);
